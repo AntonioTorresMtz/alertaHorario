@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Verifica Hora",
+  "version": "1.0",
+  "description": "Esta extension ayuda avisar al usuario sobre si su pago se vera reflejado de inmediato.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "hora.js"        
+      ],
+      "matches": [
+        "https://pagos.servitelcompany.com/"        
+      ],
+      "type": "module"
+    }
+  ]
+}
